@@ -156,7 +156,7 @@ function playAgain(){
 }
 
 	// End Game if matched all cards
-	function congratulations(){
+function congratulations(){
     if (gameCardsQTY===match){
         clearInterval(interval);
         finalTime = timer.innerHTML;
