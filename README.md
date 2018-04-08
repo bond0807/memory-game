@@ -1,6 +1,6 @@
 # Memory Match Up - Udacity Memory Game Project
 
-## What is Memoory Match Up
+## What is Memory Match Up
 
 Memory Match Up is a Javascript implementation of Memory Game (http://en.wikipedia.org/wiki/Concentration_(game)), meant to test a user's memory.
 ![snippet](img/snippet.png)
