@@ -334,3 +334,45 @@ h1 {
         width: 60%;
     }
 }
+
+/* smaller screens
+****************/
+
+
+
+@media (max-width: 767px) {
+
+    .deck {
+        width: 390px;
+
+    }
+
+    .deck .card {
+        height: 75px;
+        width: 75px;
+        line-height: 75px;
+    }
+
+    .popup {
+        width: 60%;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .deck {
+        width: 220px;
+
+    }
+
+    .deck .card {
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+        margin: 0 10px 10px 0 !important;
+    }
+
+    .popup {
+        width: 60%;
+    }
+}
