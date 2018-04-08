@@ -1,31 +1,28 @@
-# Memory Match Up
+# Memory Match Up - Udacity Memory Game Project
 
-Memory Match Up is a Javascript implementation of Memory Game (http://en.wikipedia.org/wiki/Concentration_(game)).
+## What is Memoory Match Up
 
-Demo is available at https://codepen.io/bond0807/pen/mxQQvW
+Memory Match Up is a Javascript implementation of Memory Game (http://en.wikipedia.org/wiki/Concentration_(game)), meant to test a user's memory.
+![snippet](img/snippet.png)
 
-
-## Table of Contents
-
-* [Instructions](#instructions)
-* [Bug Tracker](#Bug_Tracker)
-* [Contributing](#contributing)
+## Objective
+The objective is to match cards in the least time and fewest number of moves.
 
 ## Instructions
 
-The objective of Memory Match Up is to match all of the turned down cards in the shortest time and fewest number of moves possible.
-
-To get started, click any card.
-Select a second card.  If the cards match, animation will occur and the color of the matching cards will go from blue to yellow.
-Continue until all cards on the board are matched.
+* To get started, click any card.
+* Select a second card.  If the cards match, animation will occur and the color of the matching cards will go from blue to yellow.
+* Continue until all cards on the board are matched.
 As the move number increases, the star count will begin to decrease until it reaches one star.  With one star being the lowest possible score.
 Once all cards are matched, a popup will appear with your total time and number of moves.
+
+## How to Play
+Demo is available at https://codepen.io/bond0807/pen/mxQQvW
 
 ## Bug_Tracker
 Have you found a bug?  Please add comments to the Comments section on https://codepen.io/bond0807/pen/mxQQvW
 
-## Contributing
-
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
-
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+## How I built Memory Match Up
+I modified the DOM with JS, modified part of the HTML and added styling using CSS.
+* Created an array of cards that shuffles when the game is refreshed.
+*
