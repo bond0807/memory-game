@@ -22,7 +22,7 @@ As the move number increases, the star count will begin to decrease until it rea
 Once all cards are matched, a popup will appear with your total time and number of moves.
 
 ## Bug_Tracker
-Have you found a bug?  Please add comments to codepen.io on https://codepen.io/bond0807/pen/mxQQvW
+Have you found a bug?  Please add comments to the Comments section on https://codepen.io/bond0807/pen/mxQQvW
 
 ## Contributing
 

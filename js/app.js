@@ -6,7 +6,8 @@ let faces = ['anchor', 'anchor', 'bicycle', 'bicycle', 'bolt', 'bolt', 'bomb', '
 	opened = [],
 	match = 0,
 	moves = 0,
-  $deck = $('.deck'),
+  clicks = 0,
+	$deck = $('.deck'),
 	$scorePanel = $('#score-panel'),
 	counter = document.querySelector(".moves"),
 	$ratingStars = $scorePanel.find('i'),
@@ -70,7 +71,6 @@ function countMoves(){
         second = 0;
         minute = 0;
         hour = 0;
-        //starts timer on first click
         initTimer();
     }
     // stars decrease based on moves
@@ -122,7 +122,6 @@ $deck.on('click', '.card:not(".match, .open")', function() {
 			card = $this.context.innerHTML;
   $this.addClass('open show');
 	opened.push(card);
-  //begins counting moves on first click
   countMoves();
 
 	// Compare with opened card
@@ -148,6 +147,7 @@ $deck.on('click', '.card:not(".match, .open")', function() {
       }
     opened = [];
 
+    //countMoves();
 
   }
 
