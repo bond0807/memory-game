@@ -1,7 +1,7 @@
 
  //Create a list that holds all of your cards
 
-var faces = ['anchor', 'anchor', 'bicycle', 'bicycle', 'bolt', 'bolt', 'bomb', 'bomb', 'cube', 'cube', 'diamond', 'diamond',
+let faces = ['anchor', 'anchor', 'bicycle', 'bicycle', 'bolt', 'bolt', 'bomb', 'bomb', 'cube', 'cube', 'diamond', 'diamond',
 'leaf', 'leaf', 'paper-plane-o', 'paper-plane-o'];
 	opened = [],
 	match = 0,
@@ -19,7 +19,7 @@ var faces = ['anchor', 'anchor', 'bicycle', 'bicycle', 'bolt', 'bolt', 'bomb', '
 
 // Shuffle function From http://stackoverflow.com/a/2450976
 function shuffle(array) {
-  var currentIndex = array.length, temporaryValue, randomIndex;
+  let currentIndex = array.length, temporaryValue, randomIndex;
 
   while (0 !== currentIndex) {
     randomIndex = Math.floor(Math.random() * currentIndex);
@@ -35,19 +35,20 @@ function shuffle(array) {
 // Begin Game
 function initGame() {
   //shuffle card array list
-  var cards = shuffle(faces);
+  let cards = shuffle(faces);
   // remove exisiting classes from each card
   $deck.empty();
   match = 0;
   $ratingStars.removeClass('fa-star-o').addClass('fa-star');
-	for (var i = 0; i < cards.length; i++) {
+	for (let i = 0; i < cards.length; i++) {
 		$deck.append($('<li class="card"><i class="fa fa-' + cards[i] + '"></i></li>'))
 	}
-   // reset moves
+   // reset moves and opened array
    moves = 0;
+   opened = [];
    counter.innerHTML = moves;
    // reset rating
-   for (var i= 0; i < stars.length; i++){
+   for (let i= 0; i < stars.length; i++){
        stars[i].style.color = "#FFD700";
        stars[i].style.visibility = "visible";
    }
@@ -55,7 +56,7 @@ function initGame() {
    second = 0;
    minute = 0;
    hour = 0;
-   var timer = document.querySelector(".timer");
+   let timer = document.querySelector(".timer");
    timer.innerHTML = "0 mins 0 secs";
    clearInterval(interval);
 
@@ -88,9 +89,9 @@ function countMoves(){
     }
 }
 // game timer
-var second = 0, minute = 0; hour = 0;
-var timer = document.querySelector(".timer");
-var interval;
+let second = 0, minute = 0; hour = 0;
+let timer = document.querySelector(".timer");
+let interval;
 function initTimer(){
     interval = setInterval(function(){
         timer.innerHTML = minute+"mins "+second+"secs";
@@ -110,7 +111,7 @@ function initTimer(){
 $deck.on('click', '.card:not(".match, .open")', function() {
 	if($('.show').length > 1) { return true; }
 
-	var $this = $(this),
+	let $this = $(this),
 			card = $this.context.innerHTML;
   $this.addClass('open show');
 	opened.push(card);
@@ -156,7 +157,7 @@ function playAgain(){
 }
 
 	// End Game if matched all cards
-function congratulations(){
+	function congratulations(){
     if (gameCardsQTY===match){
         clearInterval(interval);
         finalTime = timer.innerHTML;
@@ -164,8 +165,8 @@ function congratulations(){
         // show congratulations modal
         modal.classList.add("show");
 
-        // star rating variable
-        var starRating = document.querySelector(".stars").innerHTML;
+        // star rating letiable
+        let starRating = document.querySelector(".stars").innerHTML;
 
         //showing move, rating, time on modal
         document.getElementById("finalMove").innerHTML = moves;
