@@ -25,4 +25,8 @@ Have you found a bug?  Please add comments to the Comments section on https://co
 ## How I built Memory Match Up
 I modified the DOM with JS, modified part of the HTML and added styling using CSS.
 * Created an array of cards that shuffles when the game is refreshed.
-*
+* Added logic to recognize when cards match
+* Added a timer and counter
+* Used css to add effects for when cards match or are unmatched
+* Created a pop-up modal to show when a player wins the game
+
