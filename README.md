@@ -12,13 +12,12 @@ Demo is available at https://codepen.io/bond0807/pen/mxQQvW
 
 ## Instructions
 
-The objective of Memory Match Up is to match all of the turned down cards in the shortest time and fewest number of moves possible. This is a Udacity starter project.
+The objective of Memory Match Up is to match all of the turned down cards in the shortest time and fewest number of moves possible. This is a Udacity project.
 
-The starter project has some HTML and CSS styling to display a static version of the Memory Game project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
 
-To get started, open `js/app.js` and start building out the app's functionality
 
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
+##Bug tracker
+Have you found a bug?  Please add comments to codepen.io on https://codepen.io/bond0807/pen/mxQQvW
 
 ## Contributing
 
