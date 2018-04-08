@@ -1,4 +1,9 @@
-# Memory Game Project
+# Memory Match Up
+
+Memory Match Up is a Javascript implementation of Memory Game (http://en.wikipedia.org/wiki/Concentration_(game)).
+
+Demo is available at https://codepen.io/bond0807/pen/mxQQvW
+
 
 ## Table of Contents
 
