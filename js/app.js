@@ -6,6 +6,7 @@ let faces = ['anchor', 'anchor', 'bicycle', 'bicycle', 'bolt', 'bolt', 'bomb', '
 	opened = [],
 	match = 0,
 	moves = 0,
+  clicks = 0,
 	$deck = $('.deck'),
 	$scorePanel = $('#score-panel'),
 	counter = document.querySelector(".moves"),
@@ -73,14 +74,14 @@ function countMoves(){
         initTimer();
     }
     // stars decrease based on moves
-    if (moves > 8 && moves < 14){
+    if (moves > 22 && moves < 32){
         for( i= 0; i < 3; i++){
             if(i > 1){
                 stars[i].style.visibility = "collapse";
             }
         }
     }
-    else if (moves > 15){
+    else if (moves > 33){
         for( i= 0; i < 3; i++){
             if(i > 0){
                 stars[i].style.visibility = "collapse";
@@ -106,7 +107,13 @@ function initTimer(){
         }
     },1000);
 }
-
+/*
+$deck.on('click',function() {
+  for (let click = 0; click===1; click++) {
+      initTimer();
+   }
+}
+*/
 // Card flip
 $deck.on('click', '.card:not(".match, .open")', function() {
 	if($('.show').length > 1) { return true; }
@@ -115,6 +122,7 @@ $deck.on('click', '.card:not(".match, .open")', function() {
 			card = $this.context.innerHTML;
   $this.addClass('open show');
 	opened.push(card);
+  countMoves();
 
 	// Compare with opened card
   if (opened.length > 1) {
@@ -139,7 +147,7 @@ $deck.on('click', '.card:not(".match, .open")', function() {
       }
     opened = [];
 
-    countMoves();
+    //countMoves();
 
   }
 
